@@ -1,0 +1,28 @@
+{
+  "products": [
+
+    { "name": "Kurkure Masala Munch", "price": 20, "image": "data/images/kurkure1.jpg" },
+    { "name": "Kurkure Green Chutney", "price": 20, "image": "data/images/kurkure2.jpg" },
+    { "name": "Kurkure Chilli Chatka", "price": 20, "image": "data/images/kurkure3.jpg" },
+    { "name": "Kurkure Solid Masti", "price": 20, "image": "data/images/kurkure4.jpg" },
+    { "name": "Kurkure Naughty Tomato", "price": 20, "image": "data/images/kurkure5.jpg" },
+    { "name": "Kurkure Hyderabadi Hungama", "price": 20, "image": "data/images/kurkure6.jpg" },
+    { "name": "Kurkure Puffcorn Cheese", "price": 25, "image": "data/images/kurkure7.jpg" },
+    
+
+    { "name": "Parle-G Original", "price": 10, "image": "data/images/parle1.jpg" },
+   
+    { "name": "Good Day Butter", "price": 30, "image": "data/images/goodday1.jpg" },
+    { "name": "Good Day Cashew", "price": 35, "image": "data/images/goodday2.jpg" },
+    { "name": "Good Day Pista", "price": 35, "image": "data/images/goodday3.jpg" },
+    { "name": "Good Day Strawberry", "price": 30, "image": "data/images/goodday4.jpg" },
+    { "name": "Good Day Chocolate", "price": 30, "image": "data/images/goodday5.jpg" },
+   
+    { "name": "Oreo Original", "price": 35, "image": "data/images/oreo1.jpg" },
+    { "name": "Oreo Chocolate Cream", "price": 35, "image": "data/images/oreo2.jpg" },
+    { "name": "Oreo Strawberry Cream", "price": 35, "image": "data/images/oreo3.jpg" },
+    { "name": "Oreo Double Cream", "price": 40, "image": "data/images/oreo5.jpg" },
+    { "name": "Oreo Golden", "price": 35, "image": "data/images/oreo6.jpg" },
+    { "name": "Oreo Peanut Butter", "price": 40, "image": "data/images/oreo7.jpg" }
+  ]
+}

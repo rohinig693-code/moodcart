@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>MoodCart - Home</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Welcome to MoodCart</h1>
+
+        <p>
+            Select your mood and get product recommendations instantly!
+        </p>
+
+        <!-- Navigation -->
+        <nav>
+
+            <a href="cart.html">
+                View Cart
+            </a>
+
+            |
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Mood Selection Section -->
+    <section>
+
+        <h2>Select Your Mood</h2>
+
+        <div class="mood-container">
+
+            <button onclick="selectMood('sweets')">
+                🍫 Sweets
+            </button>
+
+            <button onclick="selectMood('snacks')">
+                🍟 Snacks
+            </button>
+
+            <button onclick="selectMood('workout')">
+                💪 Workout
+            </button>
+
+            <button onclick="selectMood('study')">
+                📚 Study
+            </button>
+
+            <button onclick="selectMood('shopping')">
+                👗 Shopping
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Featured Products Section -->
+    <section>
+
+        <h2>Featured Products</h2>
+
+        <div class="products">
+
+            <div class="product-card">
+                <img src="data/images/sweets.jpg" alt="Sweets">
+                <h3>Sweets</h3>
+    
+            </div>
+
+            <div class="product-card">
+                <img src="data/images/snacks.jpg" alt="Snacks">
+                <h3>Snacks</h3>
+            </div>
+
+            <div class="product-card">
+                <img src="data/images/workout.webp" alt="Protein Bar">
+                <h3>Protein Bar</h3>
+            </div>
+
+            <div class="product-card">
+                <img src="data/images/study.jpg" alt="Books">
+                <h3>Study Materials</h3>
+            </div>
+
+             <div class="product-card">
+                <img src="data/images/shopping.jpg" alt="Shopping">
+                <h3>Shopping</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 MoodCart Project
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

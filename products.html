@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>MoodCart Products</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+
+        <h1>MoodCart Products</h1>
+
+        <!-- Navigation Buttons -->
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            |
+
+            <a href="cart.html">
+                View Cart
+            </a>
+
+            |
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Search Section -->
+    <section>
+
+        <h2>Search Products</h2>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search product..."
+            onkeyup="searchProduct()"
+        >
+
+    </section>
+    <div id="workout-section">
+
+ 
+
+
+    <!-- Products Section -->
+    <section>
+
+        <h2>Products Based on Your Mood</h2>
+
+        <!-- Products will load here dynamically -->
+        <div id="product-list">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 MoodCart Project
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

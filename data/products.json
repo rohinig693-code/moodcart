@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "name": "Dairy Milk Chocolate",
+    "price": 100,
+    "image": "images/chocolate.jpg",
+    "mood": "sweets"
+  },
+  {
+    "id": 2,
+    "name": "KitKat Chocolate",
+    "price": 50,
+    "image": "images/kitkat.jpg",
+    "mood": "sweets"
+  },
+  {
+    "id": 3,
+    "name": "Lollipop Candy",
+    "price": 20,
+    "image": "images/lollipop.jpg",
+    "mood": "sweets"
+  },
+
+  {
+    "id": 4,
+    "name": "Potato Chips",
+    "price": 40,
+    "image": "images/chips.jpg",
+    "mood": "snacks"
+  },
+  {
+    "id": 5,
+    "name": "Nachos",
+    "price": 60,
+    "image": "images/nachos.jpg",
+    "mood": "snacks"
+  },
+  {
+    "id": 6,
+    "name": "Popcorn",
+    "price": 80,
+    "image": "images/popcorn.jpg",
+    "mood": "snacks"
+  },
+
+  {
+    "id": 7,
+    "name": "Protein Bar",
+    "price": 150,
+    "image": "images/protein.jpg",
+    "mood": "workout"
+  },
+  {
+    "id": 8,
+    "name": "Energy Drink",
+    "price": 120,
+    "image": "images/energy.jpg",
+    "mood": "workout"
+  },
+  {
+    "id": 9,
+    "name": "Peanut Butter",
+    "price": 200,
+    "image": "images/peanutbutter.jpg",
+    "mood": "workout"
+  },
+
+  {
+    "id": 10,
+    "name": "Coffee",
+    "price": 120,
+    "image": "images/coffee.jpg",
+    "mood": "study"
+  },
+  {
+    "id": 11,
+    "name": "Green Tea",
+    "price": 90,
+    "image": "images/greentea.jpg",
+    "mood": "study"
+  },
+  {
+    "id": 12,
+    "name": "Dry Fruits",
+    "price": 250,
+    "image": "images/dryfruits.jpg",
+    "mood": "study"
+  },
+
+  {
+    "id": 13,
+    "name": "Mixed Nuts",
+    "price": 200,
+    "image": "images/nuts.jpg",
+    "mood": "relax"
+  },
+  {
+    "id": 14,
+    "name": "Ice Cream",
+    "price": 150,
+    "image": "images/icecream.jpg",
+    "mood": "relax"
+  },
+  {
+    "id": 15,
+    "name": "Chocolate Cake",
+    "price": 300,
+    "image": "images/cake.jpg",
+    "mood": "relax"
+  }
+]

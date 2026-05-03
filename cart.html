@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>MoodCart Cart</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Your Shopping Cart</h1>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            |
+
+            <a href="products.html">
+                Products
+            </a>
+
+            |
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Cart Section -->
+    <section>
+
+        <h2>Items in Your Cart</h2>
+
+        <!-- Cart items -->
+        <div id="cart-items">
+
+        </div>
+
+        <!-- Total Price -->
+        <h3 id="total-price">
+            Total: ₹0
+        </h3>
+
+    </section>
+
+
+
+    <!-- Buttons -->
+    <section>
+
+        <button onclick="clearCart()">
+            Clear Cart
+        </button>
+
+        <button onclick="checkout()">
+            Checkout
+        </button>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 MoodCart Project
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
