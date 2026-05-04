@@ -10,10 +10,10 @@ function loginUser(event) {
 
     if (username === "admin" && password === "1234") {
         localStorage.setItem("loggedIn", true);
-        alert("Login Successful");
+        showPopup("✅ Login Successful");       
         window.location.href = "index.html";
     } else {
-        alert("Invalid Credentials");
+        showPopup("❌ Invalid Credentials");
     }
 }
 
@@ -513,7 +513,7 @@ case "shopping":
         const btn = document.getElementById(`wish-${idx}`);
         if (btn.textContent === "🤍") {
             btn.textContent = "❤️";
-            alert(filteredProducts[idx].title + " added to wishlist!");
+            showPopup(filteredProducts[idx].title + " added to wishlist!");
         } else {
             btn.textContent = "🤍";
         }
@@ -522,7 +522,7 @@ case "shopping":
     window.viewDetails = function(idx) {
         const product = filteredProducts[idx];
         const price = Math.round(product.price * 80);
-        alert(`📦 ${product.title}\n\n💰 Price: ₹${price}\n\n✅ In Stock\n\n⭐ Highly Rated\n\nClick Add to Cart to purchase!`);
+        showPopup(`📦 ${product.title}\n\n💰 Price: ₹${price}\n\n✅ In Stock\n\n⭐ Highly Rated\n\nClick Add to Cart to purchase!`);
     };
 
     break;
@@ -580,8 +580,7 @@ function addToCart(name, price) {
         JSON.stringify(cart)
     );
 
-    alert(name + " added to cart");
-}
+showPopup("🛒 MoodCart: " + name + " added to cart");}
 
 
 // ===============================
@@ -590,42 +589,36 @@ function addToCart(name, price) {
 
 function loadCart() {
 
-    let container =
-        document.getElementById("cart-items");
-
+    let container = document.getElementById("cart-items");
     if (!container) return;
 
-    let cartItems =
-        JSON.parse(localStorage.getItem("cart")) || [];
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
     container.innerHTML = "";
 
     let total = 0;
 
+    if (cartItems.length === 0) {
+        container.innerHTML = "<p>Your cart is empty</p>";
+        document.getElementById("total-price").innerText = "Total: ₹0";
+        return;
+    }
+
     cartItems.forEach((item, index) => {
 
         total += item.price;
 
-        let div =
-            document.createElement("div");
+        let div = document.createElement("div");
 
         div.innerHTML = `
             ${item.name} - ₹${item.price}
-            <button onclick="removeFromCart(${index})">
-                Remove
-            </button>
+            <button onclick="removeFromCart(${index})">Remove</button>
         `;
 
         container.appendChild(div);
     });
 
-    let totalDiv =
-        document.createElement("h3");
-
-    totalDiv.innerHTML =
-        "Total: ₹" + total;
-
-    container.appendChild(totalDiv);
+    document.getElementById("total-price").innerText = "Total: ₹" + total;
 }
 
 
@@ -643,6 +636,38 @@ function removeFromCart(index) {
     );
 
     loadCart();
+}
+function clearCart() {
+    console.log("Clear button clicked"); 
+
+    localStorage.removeItem("cart");
+
+showPopup("🗑️ Cart Cleared");
+    loadCart(); // refresh UI
+}
+function checkout() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        showPopup("🛒 Your cart is empty!");
+        return;
+    }
+
+    let total = 0;
+    cart.forEach(item => {
+        total += item.price || 0;
+    });
+
+    // Step 1: Show total
+    showPopup("💰 Total: ₹" + total);
+
+    // Step 2: Auto place order after delay (optional UX)
+    setTimeout(() => {
+        showPopup("🎉 Order placed successfully!");
+
+        localStorage.setItem("cart", JSON.stringify([]));
+        loadCart();
+    }, 1500);
 }
 
 
@@ -792,14 +817,14 @@ function filterExercises(type) {
 // PLAN
 // ===============================
 function generateWorkout() {
-    alert("Workout plan generated 💪");
+    showPopup("Workout plan generated 💪");
 }
 
 // ===============================
 // TIMER
 // ===============================
 function startTimer(sec) {
-    alert("Timer started: " + sec + " seconds");
+    showPopup("Timer started: " + sec + " seconds");
 }
 
 // ===============================
@@ -811,3 +836,20 @@ function completeWorkout() {
         "Workouts Done: " + workoutCount;
 }
 
+function showPopup(message) {
+    let popup = document.getElementById("custom-popup");
+    let text = document.getElementById("popup-text");
+
+    if (!popup || !text) {
+        console.warn("Popup not found in this page");
+        alert(message); // fallback so you still see something
+        return;
+    }
+
+    text.innerText = message;
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 2000);
+}
